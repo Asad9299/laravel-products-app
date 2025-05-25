@@ -17,7 +17,6 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->decimal('price', 10, 2);
             $table->integer('quantity')->default(0);
-            $table->string('featured_image')->nullable();
             $table->timestamps();
             $table->SoftDeletes();
         });

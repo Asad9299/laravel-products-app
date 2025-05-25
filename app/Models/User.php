@@ -60,7 +60,7 @@ class User extends Authenticatable
             ->with('roles')
             ->where('name', 'LIKE', "%{$searchTerm}%")
             ->orderBy('id', 'desc')
-            ->paginate(1);
+            ->paginate(config('pagination.per_page'));
     }
 
     public function remove() {

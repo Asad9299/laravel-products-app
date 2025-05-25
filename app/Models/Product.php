@@ -17,7 +17,7 @@ class Product extends Model
             ->with('images')
             ->where('title', 'LIKE', "%{$searchTerm}%")
             ->orderBy('id', 'desc')
-            ->paginate(1);
+            ->paginate(config('pagination.per_page'));
     }
 
     public function add(array $data = []) {
