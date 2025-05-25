@@ -57,4 +57,6 @@ Use the following credentials to log in as an admin user:
 - **Password:** `12345678`
 
 ## Screenshots
-![Products List Page] ![image](https://github.com/user-attachments/assets/ca312d68-320f-45ac-bc9f-ed8d0b21317c)
+![Products List Page - Admin View] ![image](https://github.com/user-attachments/assets/ca312d68-320f-45ac-bc9f-ed8d0b21317c)
+
+![Products List Page - User View]  ![image](![image](https://github.com/user-attachments/assets/b40b4341-da1d-4671-9ce6-a23e44acdd30)
