@@ -46,6 +46,12 @@ A Laravel-based application with authentication, product management, and user ma
    php artisan migrate --seed
 
 6. Compile frontend assets:
-   ``bash 
+   ```bash 
    npm run dev
-   
+
+## Test User
+
+Use the following credentials to log in as an admin user:
+
+- **Email:** `admin@gmail.com`
+- **Password:** `12345678`
