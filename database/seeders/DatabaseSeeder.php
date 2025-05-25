@@ -21,12 +21,13 @@ class DatabaseSeeder extends Seeder
         $userRole = Role::firstOrCreate(['name' => 'User']);
 
         // Create Admin user
-        $user = User::firstOrCreate([
-            'name' => 'Admin',
-            'email' => 'admin@gmail.com',
-            'password' => bcrypt('12345678')
-        ]);
-
-        $user->roles()->attach($adminRole, ['created_at' => Carbon::now()]);
+        if ( !User::where('email', 'admin@gmail.com')->exists() ) {
+            $user = User::create([
+                'name' => 'Admin',
+                'email' => 'admin@gmail.com',
+                'password' => bcrypt('12345678')
+            ]);
+            $user->roles()->attach($adminRole, ['created_at' => Carbon::now()]);
+        }
     }
 }
