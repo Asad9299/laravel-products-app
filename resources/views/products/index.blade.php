@@ -10,9 +10,11 @@
     <div class="container mx-auto px-4 py-6">
 
         <!-- Create Product Button -->
-        <a href="{{ route('products.create') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4">
-            Create Product
-        </a>
+        @if(auth()->user()->isAdmin())
+            <a href="{{ route('products.create') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4">
+                Create Product
+            </a>
+        @endif
 
         <!-- Search Form -->
         <form method="GET" action="{{ route('products.index') }}" class="mt-4">
